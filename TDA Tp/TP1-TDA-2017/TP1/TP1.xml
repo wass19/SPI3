@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJET NOM="TP1" TYPE="C">
+  <FICHIER>eltcar.c</FICHIER>
+  <FICHIER>eltcar.h</FICHIER>
+  <FICHIER>eltsdd.h</FICHIER>
+  <FICHIER>lstprim.h</FICHIER>
+  <FICHIER>lstsdd.h</FICHIER>
+  <FICHIER>lstfauxptr.h</FICHIER>
+  <FICHIER>eltprim.h</FICHIER>
+  <FICHIER>lstfauxptr.c</FICHIER>
+  <FICHIER>Makefile</FICHIER>
+  <FICHIER>test_lst.c</FICHIER>
+  <FICHIER>lstop.c</FICHIER>
+  <FICHIER>lstop.h</FICHIER>
+  <FICHIER>interpreteur_lst.c</FICHIER>
+</PROJET>
+

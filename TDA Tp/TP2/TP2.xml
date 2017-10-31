@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJET NOM="TP2" TYPE="C">
+  <FICHIER>Makefile</FICHIER>
+  <FICHIER>eltoperation.h</FICHIER>
+  <FICHIER>eltoperation.c</FICHIER>
+  <FICHIER>eltprim.h</FICHIER>
+  <FICHIER>eltsdd.h</FICHIER>
+  <FICHIER>operations.c</FICHIER>
+  <FICHIER>operations.h</FICHIER>
+  <FICHIER>pileprim.h</FICHIER>
+  <FICHIER>pilesdd.h</FICHIER>
+  <FICHIER>piltabdy.c</FICHIER>
+  <FICHIER>piltabdy.h</FICHIER>
+  <FICHIER>lstprim.h</FICHIER>
+  <FICHIER>lstsdd.h</FICHIER>
+  <FICHIER>lstptr.c</FICHIER>
+  <FICHIER>lstptr.h</FICHIER>
+  <FICHIER>testOperations.c</FICHIER>
+  <FICHIER>lstop.c</FICHIER>
+  <FICHIER>lstop.h</FICHIER>
+  <FICHIER>testPost.c</FICHIER>
+  <FICHIER>interpreteur.h</FICHIER>
+  <FICHIER>interpreteur.c</FICHIER>
+  <FICHIER>calculette.c</FICHIER>
+</PROJET>
+

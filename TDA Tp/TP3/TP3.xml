@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJET NOM="TP3" TYPE="C">
+  <FICHIER>Makefile</FICHIER>
+  <FICHIER>arbiprim.h</FICHIER>
+  <FICHIER>eltcar.c</FICHIER>
+  <FICHIER>eltcar.h</FICHIER>
+  <FICHIER>eltprim.h</FICHIER>
+  <FICHIER>eltsdd.h</FICHIER>
+  <FICHIER>ARBRE_liste.c</FICHIER>
+  <FICHIER>ARBRE_liste.h</FICHIER>
+  <FICHIER>ARBRE_prim.h</FICHIER>
+  <FICHIER>ARBRE_sdd.h</FICHIER>
+  <FICHIER>ARBRE_test.c</FICHIER>
+  <FICHIER>ARBRE_op.c</FICHIER>
+  <FICHIER>ARBRE_op.h</FICHIER>
+  <FICHIER>ARBRE_op_test.c</FICHIER>
+  <FICHIER>eltstr.c</FICHIER>
+  <FICHIER>eltstr.h</FICHIER>
+  <FICHIER>eltstr_test.c</FICHIER>
+  <FICHIER>File_PTR_Circulaire.c</FICHIER>
+  <FICHIER>File_PTR_Circulaire.h</FICHIER>
+  <FICHIER>File_Prim.h</FICHIER>
+  <FICHIER>File_SDD.h</FICHIER>
+</PROJET>
+
