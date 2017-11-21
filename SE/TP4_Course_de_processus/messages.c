@@ -17,6 +17,9 @@ messages_afficher_etat( const etat_coureur_t etat )
     case DECANILLE :
       printf("DECANILLE") ;
       break ;
+   case ABANDON :
+      printf("ABANDON") ;
+      break ;
     default :
       printf("<inconnu (%d)>" , etat ) ;
       break ;
@@ -26,7 +29,7 @@ messages_afficher_etat( const etat_coureur_t etat )
 
 static
 void
-messages_afficher_type( int type )
+messages_afficher_type( long type )
 {
   switch(type)
     {
@@ -34,10 +37,18 @@ messages_afficher_type( int type )
       printf("PC_COURSE") ;
       break ;
     default :
-      printf("%d" , type) ;
+      printf("%ld" , type) ;
       break ;
     }
 
+}
+
+static
+void
+messages_afficher_corps( corps_requete_t * corps )
+{
+  printf("\tDossard = %d\n" , corps->dossard ) ;
+  printf("\tEtat    = " ) ;   messages_afficher_etat( corps->etat ) ;  printf("\n") ;
 }
 
 /*
@@ -52,7 +63,7 @@ messages_afficher_requete( requete_t * const requete )
   printf("\tType = ") ; messages_afficher_type(requete->type) ; printf("\n");
 
   /* Corps */
-  printf("\tDossard = %d\n\n" , requete->corps.dossard ) ;
+  messages_afficher_corps( &(requete->corps) ) ; printf("\n");
 }
 
 /*
@@ -171,3 +182,25 @@ messages_attendre_tour()
 {
   sleep(random()%10) ;
 }
+
+extern
+void
+messages_afficher_erreur( err_t cr )
+{
+  switch( cr )
+    {
+    case OK :
+      printf( "OK" ) ;
+      break ;
+    case ETAT_BAD :
+      printf( "Mauvaise valeur de l'etat du coureur") ;
+      break ;
+    case ABANDON_ACK :
+       printf( "ACK sur abandon") ;
+       break ;
+    default :
+      printf( "Type de compte rendu inconnu") ;
+      break ;
+    }
+}
+

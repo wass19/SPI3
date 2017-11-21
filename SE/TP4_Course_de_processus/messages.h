@@ -13,7 +13,9 @@ typedef int compteur_t ;
 typedef unsigned int distance_t ;
 typedef enum booleen { FAUX , VRAI } booleen_t ;
 
-typedef enum etat_coureur { EN_COURSE , ARRIVE , DECANILLE } etat_coureur_t ;
+typedef enum etat_coureur { EN_COURSE , ARRIVE , DECANILLE , ABANDON } etat_coureur_t ;
+
+typedef enum err_t { OK , ETAT_BAD , ABANDON_ACK } err_t ;
 
 
 /* Structure message Coureur --> PC Course */
@@ -21,6 +23,7 @@ typedef enum etat_coureur { EN_COURSE , ARRIVE , DECANILLE } etat_coureur_t ;
 typedef struct corps_requete
 {
   pid_t dossard ;
+  etat_coureur_t etat ;
 } corps_requete_t ;
 
 typedef struct requete
@@ -39,6 +42,7 @@ typedef struct coureur
 
 typedef struct corps_reponse
 {
+  err_t compte_rendu ;
   etat_coureur_t  etat ;
   compteur_t  nb_coureurs ;
   coureur_t   tab_coureurs[MAX_COUREURS] ;
@@ -49,6 +53,12 @@ typedef struct reponse
   long type ;
   corps_reponse_t corps ;
 } reponse_t ;
+
+typedef struct ack_s
+{
+  long type ;
+  err_t ack ;
+} ack_t ;
 
 
 /*
@@ -84,4 +94,10 @@ messages_initialiser_attente() ;
 extern
 void
 messages_attendre_tour() ;
+
+/* Affichage message d'erreur */
+extern
+void
+messages_afficher_erreur( err_t cr )  ;
+
 #endif
