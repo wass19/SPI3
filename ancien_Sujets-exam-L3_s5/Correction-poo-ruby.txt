@@ -1,0 +1,86 @@
+﻿Questions de cours :
+
+1. Cela permet de régler les problèmes de sérialisation
+
+2. C'est un module à inclure dans les classes pour ajout de nouvelles fonctionnalités.Comparable
+
+3. Adhoc -> Surcharge & Héritage -> Redéfinition
+
+4. Polymorphisùe paramétrique
+
+5. Il faut savoir gérer explicitement les retours de méthodes. Renvoyer self serait une bonne idée.
+
+6. Nécessaire car il faut initialiser tous les champs
+
+7. Méthodes destructives avec !
+
+8. inject -> Opérateur sur les collections qui permet d'accumuler les éléments
+
+Exo 
+1 :
+1. Problème avec x.each
+
+2. def each
+	@@voyelles.reverse.each { |v| yield v}
+   end
+
+3. Problème avec x.collect
+
+4. Inclure Enumerable et c'est tout!
+
+Exo 2 :
+1. def pasQuUn
+	res = []
+	self.uniq.each { |c|res.push(c) if self.count(c) > 1
+}
+res
+   end
+
+
+2.
+def aplatir
+	inject([]) { |acc, el| acc+Array(case el when Array then el.applatir else el end) }
+end
+
+
+3.
+def to_h
+hash => self.inject(Hash.new) do |accu, tableau|
+accu[tableau.first] = tableau.last
+accu
+end
+
+
+4. //A vérifier car je n'arrive plus à me relire
+class ArrayIterator@tableau <- init
+@index = 0
+
+def has_next?
+@index < tableau.length
+ end
+
+ def next_item
+ value
+   //Ici
+ end
+end
+
+class Array
+ def pourChacunDesElements
+ self.each {
+|e| yield e
+}
+ end
+end
+
+Exo 
+3 :
+init -> donnees = lesDonnees.uniq
+ajout -> @donnees << unElement @donnes.uniq
+suppr -> @donnes.delete(unElement)
+egalite(unEnsemble) -> 
+@donnees.sortunEnsemble
+	donnes.sort == []
+union -> Ensemble.new(unEnsemble, unAutre)
+ //A vérifier
+
