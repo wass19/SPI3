@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJET NOM="TP1_Supp" TYPE="C">
+  <FICHIER>eltint.c</FICHIER>
+  <FICHIER>eltint.h</FICHIER>
+  <FICHIER>eltsdd.h</FICHIER>
+  <FICHIER>eltprim.h</FICHIER>
+  <FICHIER>lstfauxptr.c</FICHIER>
+  <FICHIER>lstfauxptr.h</FICHIER>
+  <FICHIER>lstprim.h</FICHIER>
+  <FICHIER>lstsdd.h</FICHIER>
+  <FICHIER>test_lst.c</FICHIER>
+  <FICHIER>Makefile</FICHIER>
+  <FICHIER>lstop.c</FICHIER>
+  <FICHIER>lstop.h</FICHIER>
+  <FICHIER>ensemble.c</FICHIER>
+  <FICHIER>ensemble.h</FICHIER>
+</PROJET>
+
