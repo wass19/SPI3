@@ -1,0 +1,7 @@
+EX1--
+2-/Le texte html ne s'affiche pas de suite car on execute avant le code java
+3-/une alert ou pop up!
+4-/l'alert est toujours en première position mais l'ordre d'affichage du texte change.
+5-/
+
+EX2--

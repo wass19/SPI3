@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js evenements</title>
+    <meta charset="utf-8"/>
+
+</head>
+<body id="body">
+
+	<p>
+    	<img id="POS1" src="" alt="" />
+	<img id="POS2" src="" alt="" />
+	<img id="POS3" src="" alt="" />
+	<img id="POS4" src="" alt="" />
+	</p>
+
+	<p>
+    	<img id="POS5" src="" alt="" />
+	<img id="POS6" src="" alt="" />
+	<img id="POS7" src="" alt="" />
+	<img id="POS8" src="" alt="" />
+	</p>
+
+
+	<p>
+    	<img id="POS9" src="" alt="" />
+	<img id="POS10" src="" alt="" />
+	<img id="POS11" src="" alt="" />
+	<img id="POS12" src="" alt="" />
+	</p>
+
+
+	<p>
+    	<img id="POS13" src="" alt="" />
+	<img id="POS14" src="" alt="" />
+	<img id="POS15" src="" alt="" />
+	<img id="POS16" src="" alt="" />
+	</p>
+
+	<p id="test"><p>
+
+	<script>
+
+
+
+	var pos1 = document.getElementById("POS1");
+	var pos2 = document.getElementById("POS2");
+	var pos3 = document.getElementById("POS3");
+	var pos4 = document.getElementById("POS4");
+
+
+
+	var pos5 = document.getElementById("POS5");
+	var pos6 = document.getElementById("POS6");
+	var pos7 = document.getElementById("POS7");
+	var pos8 = document.getElementById("POS8");
+
+
+
+	var pos9 = document.getElementById("POS9");
+	var pos10 = document.getElementById("POS10");
+	var pos11 = document.getElementById("POS11");
+	var pos12 = document.getElementById("POS12");
+
+	var pos13 = document.getElementById("POS13");
+	var pos14 = document.getElementById("POS14");
+	var pos15 = document.getElementById("POS15");
+	var pos16 = document.getElementById("POS16");
+
+
+	var test = document.getElementById("test");
+
+
+	var p1,p2 =false;
+
+	var positions = [pos1,pos2,pos3,pos4,pos5,pos6,pos7,pos8,pos9,pos10,pos11,pos12,pos13,pos14,pos15,pos16];
+	var memoire =[];
+	var cpt = 0;
+	var cartes =["images/Denis.jpg","images/Denis1.jpg","images/Denis2.jpg","images/Denis3.jpg","images/Denis4.jpg","images/Denis5.jpg","images/Denis6.jpg","images/Denis7.jpg","images/Denis.jpg","images/Denis1.jpg","images/Denis2.jpg","images/Denis3.jpg","images/Denis4.jpg","images/Denis5.jpg","images/Denis6.jpg","images/Denis7.jpg"];
+
+
+
+
+
+	function reveler(posi){
+		 posi.style.filter = "contrast(100%)";
+		 setTimeout(function(){
+                 posi.style.filter = "contrast(0%)";
+             }, 1000)
+	}
+
+
+	function mem(posi){
+		if(memoire.length > 2){
+			memoire  =[];
+		}
+		memoire.push(posi);
+		test.textContent = memoire;
+
+
+
+
+		if(memoire[0].src == memoire[1].src){
+			test.textContent = "EGAUX";
+			memoire[0].style.filter = "contrast(100%)";
+			memoire[1].style.filter = "contrast(100%)";
+			memoire  =[];
+			++cpt;
+			if(cpt == 8){
+				alert("Vous avez gagné");
+			}
+		}
+		else if((memoire[0].src != memoire[1].src) && (memoire[0] != null && memoire[1] != null) ){
+			reveler(memoire[0]);
+			reveler(memoire[1]);
+			memoire  =[];
+		}
+	}
+
+
+
+
+
+
+
+	function getRandomInt(max) {
+  		return Math.floor(Math.random() * Math.floor(max));
+	}
+
+
+
+	function randCartes(){
+			for(var i=0; i<100; ++i){
+				var rand1=getRandomInt(16);
+				var rand2=getRandomInt(16);
+				if (rand1 == rand2){
+				 	rand2=getRandomInt(16);
+				}
+				else{
+					tmp = cartes[rand1];
+					cartes[rand1] = cartes[rand2];
+					cartes[rand2] = tmp;
+					tmp=null;
+
+				}
+
+			}
+			for(var i=0; i<(positions.length); ++i){
+				positions[i].src = cartes[i];
+			}
+	}
+
+
+
+
+
+	function addContrast(tab){
+		for(var i=0; i<(tab.length); ++i){
+			tab[i].style.filter = "contrast(0%)";
+		}
+	}
+
+
+
+	function event(posi){
+		 posi.addEventListener('click', function() {
+		 posi.style.filter = "contrast(100%)";
+		 mem(posi);
+    	}, true);
+	}
+
+
+
+	randCartes();
+ 	addContrast(positions);
+	
+
+	
+	event(pos1);
+	event(pos2);
+	event(pos3);
+	event(pos4);
+	event(pos5);
+	event(pos6);
+	event(pos7);
+	event(pos8);
+	event(pos9);
+	event(pos10);
+	event(pos11);
+	event(pos12);
+	event(pos13);
+	event(pos14);
+	event(pos15);
+	event(pos16);
+
+	</script>
+</body>
+</html>

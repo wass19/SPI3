@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Des fonctions sur les tableaux</title>
+    <meta charset="utf-8"/>
+	
+</head>
+<body>
+	<h1>Les tableaux en javaScript</h1>	
+
+	<script>
+
+	/*Affiche le contenu d'un tableau en HTML*/
+	function affiche_tableau(t){
+		document.write("Liste des notes : ");
+		document.write(t.join());
+	}
+
+	/*calcule et affiche ma moyenne des elements d'un tableau*/
+	function affiche_moyenne(t){
+		var nb =t.length;
+		document.write(" <br/>  Moyenne = ");
+		var moyenne = 0;
+		for(var i=0 ; i<nb; ++i){
+			moyenne = moyenne + t[i]
+		} 
+		document.write(moyenne/nb);
+	}
+
+	/*Compte et affiche le nombre d'apparitions d'un element dans un tableau*/
+	function occurences(x,t){
+		var cpt = 0;
+		var nb =t.length;
+		for(var i=0 ; i<nb; ++i){
+			if(t[i] == x){
+				cpt++;
+
+			}	
+		} 
+		document.write("<br/> nombre d'occurences de " + x +" = " + cpt);
+	}
+
+
+	function onteulamoyenne(t){
+		var cpt = 0;
+		var nb =t.length;
+		for(var i=0 ; i<nb; ++i){
+			if(t[i] >= 10){
+				cpt++;
+
+			}	
+		} 
+		document.write("<br/>"+ cpt +" personnes ont eu la moyenne ou plus.");
+	}
+	
+	function recherche(x,t){
+		var cpt = 0;
+		var nb =t.length;
+		var flag = 0;
+		for(var i=0 ; i<nb; ++i){
+			if(t[i] == x){
+				flag = 1;
+
+			}	
+		} 
+		if(flag == 1){
+			document.write("<br/> L'element "+ x + " est present");
+		}else{	
+			document.write("<br/> L'element "+ x + " est absent");
+		}
+	}
+
+	var notes =[13,11,9,4,18,3,11,17,10];
+	affiche_tableau(notes);
+	affiche_moyenne(notes);
+	occurences(11,notes);
+	onteulamoyenne(notes);
+	recherche(9,notes);
+	recherche(20,notes);
+</script>
+</body>
+</html>

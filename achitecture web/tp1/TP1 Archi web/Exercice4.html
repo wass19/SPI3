@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js evenements</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="Exercice4.css" />
+</head>
+<body>
+	<h1>Formulaire</h1>
+
+
+	<p style="display: inline" >Sexe :
+	<input type="radio" id="homme"  >Homme
+	<input type="radio" id="femme"   >Femme<p id="genretext" style="display: inline" ></p>
+	</p>
+
+	<p style="display: inline">
+	Nom : <input type="text" id="nom"  ><p id="nomtext" style="display: inline" ></p></input>
+	</p>
+
+	<p style="display: inline">
+	Prenom : <input type="text" id="prenom"  ><p id="prenoomtext" style="display: inline" ></p></input>
+	</p>
+
+	<p style="display: inline">
+	Mot de passe : <input type="password"  id="pass"  ><p id="passtext" style="display: inline" ></p></input>
+	</p>
+
+
+
+	<p style="display: inline" >
+	Pays : <select name="sele" id ="pays">
+		<option value="Choisir un pays">Choisir un pays</option>
+		<option value="France">France</option>
+		<option value="Espagne">Espagne</option>
+		</select>
+		<p id="paystext" style="display: inline" ></p></input>
+	</p>
+
+
+	<button id="valider">Valider</button>
+	<button style="display: inline" id= "raz" >Remettre à zero</button>
+
+
+
+
+
+
+	<script>
+
+	var pass = document.getElementById("pass");
+	var passtext = document.getElementById("passtext");
+	  pass.addEventListener('input', function() {
+	  if((pass.value).length <6){
+		passtext.textContent = "  Moins 6 caractères !";
+	  }
+       	  else{
+	        passtext.textContent ="OK"
+	  }
+    	}, true);
+
+
+
+	var prenom = document.getElementById("prenom");
+	var prenoomtext = document.getElementById("prenoomtext");
+	  prenom.addEventListener('input', function() {
+	  if((prenom.value).length <2){
+		prenoomtext.textContent = "Un nom ne pas pas faire moins de 2 caratères !";
+	  }
+       	  else{
+	        prenoomtext.textContent ="OK"
+	  }
+    	}, true);
+
+
+
+	var nom = document.getElementById("nom");
+	var nomtext = document.getElementById("nomtext");
+	  nom.addEventListener('input', function() {
+	  if((nom.value).length <2){
+		nomtext.textContent = "Un nom ne pas pas faire moins de 2 caratères !";
+	  }
+       	  else{
+	        nomtext.textContent ="OK"
+	  }
+    	}, true);
+
+	var femme = document.getElementById("femme");
+	var homme = document.getElementById("homme");
+	var genretext = document.getElementById("genretext");
+	homme.addEventListener('click', function() {
+		femme.checked = false;
+		genretext.textContent ="";
+    	}, true);
+
+	femme.addEventListener('click', function() {
+		homme.checked = false;
+		genretext.textContent ="";
+    	}, true);
+
+
+
+	var raz = document.getElementById("raz");
+	raz.addEventListener('click', function() {
+		femme.checked = false;
+		homme.checked = false;
+		prenom.value =null;
+		nom.value =null;
+		pass.value =null;
+    	}, true);
+
+	var pays = document.getElementById("pays");
+	var paystext = document.getElementById("paystext");
+	var valider = document.getElementById("valider");
+	valider.addEventListener('click', function() {
+		if(homme.checked == false && femme.checked ==false){
+			genretext.textContent =" Veuillez renseigner le genre";
+		}
+		if(pays.value == "Choisir un pays"){
+			paystext.textContent =" Veuillez renseigner le pays";
+		}
+    	}, true);
+
+
+
+
+	</script>
+</body>
+</html>

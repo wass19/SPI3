@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet"/>
+
+    <title>Exo4 fotmulaire</title>
+
+</head>
+<body>
+
+
+        <p style="display: inline" >Sexe :
+        <input type="radio" id="homme"  >Homme
+        <input type="radio" id="femme"   >Femme <p id="genretext" style="display: inline" ></p>
+        </p>
+
+
+        <p style="display: inline">
+        Nom : <input type="text"  id="nom"  ><p id="nomtext" style="display: inline" ></p></input>
+        </p>
+
+        <p style="display: inline">
+        Prenom : <input type="text"  id="prenom"  ><p id="prenomtext" style="display: inline" ></p></input>
+        </p>
+
+        <p style="display: inline">
+        Mot de passe : <input type="password"  id="mdp"  ><p id="passtext" style="display: inline" ></p></input>
+        </p>
+
+        <br /><br />
+
+        <p style="display: inline">Pays :<select name="pays" id="pays">
+          	<option value="none">Sélectionnez votre pays de résidence</option>
+            <option value="Dz">Algérie</option>
+            <option value="en">Angleterre</option>
+          	<option value="us">États-Unis</option>
+          	<option value="fr">France</option>
+            <option value="Tr">Turquie</option>
+      	   </select>
+         <p id="paystext" style="display: inline"></p></input>
+      </p>
+
+        <br /><br />
+
+        <input type="submit" value="M'inscrire" id="valider" /> <input type="reset" value="Réinitialiser le formulaire" id="reset"/>
+
+
+    <script>
+
+    var femme = document.getElementById("femme");
+  	var homme = document.getElementById("homme");
+  	var genretext = document.getElementById("genretext");
+  	homme.addEventListener('click', function() {
+  		femme.checked = false;
+  		genretext.textContent ="";
+      	}, true);
+
+  	femme.addEventListener('click', function() {
+  		homme.checked = false;
+  		genretext.textContent ="";
+      	}, true);
+
+      var mdp = document.getElementById("mdp");
+      var passtext = document.getElementById("passtext");
+      var longueurMdp = "faible";
+      var couleurMsg = "red";
+        mdp.addEventListener('input', function() {
+        if((mdp.value).length <6){
+        passtext.style.color = couleurMsg;
+        passtext.textContent = "  Moins 6 caractères !";
+        }
+            else{
+              couleurMsg = "green";
+              passtext.style.color = couleurMsg;
+              passtext.textContent ="  suffisante";
+              couleurMsg = "red";
+            }
+          }, true);
+
+      var nom = document.getElementById("nom");
+      var nomtext = document.getElementById("nomtext");
+      var couleurMsg = "red";
+        nom.addEventListener('input', function() {
+        if((nom.value).length <2){
+        nomtext.style.color = couleurMsg;
+        nomtext.textContent = "  Un nom ne peut pas faire moin de 2 charactère !";
+        }
+            else{
+              couleurMsg = "green";
+              nomtext.style.color = couleurMsg;
+              nomtext.textContent ="  OK";
+              couleurMsg = "red";
+            }
+          }, true);
+
+
+
+      var prenom = document.getElementById("prenom");
+      var prenomtext = document.getElementById("prenomtext");
+      var couleurMsg = "red";
+        prenom.addEventListener('input', function() {
+        if((prenom.value).length <2){
+        prenomtext.style.color = couleurMsg;
+        prenomtext.textContent = "  Un prenom ne peut pas faire moin de 2 charactère !";
+        }
+            else{
+              couleurMsg = "green";
+              prenomtext.style.color = couleurMsg;
+              prenomtext.textContent ="  OK";
+              couleurMsg = "red";
+            }
+          }, true);
+
+
+      var pays = document.getElementById("pays");
+    	var paystext = document.getElementById("paystext");
+    	var valider = document.getElementById("valider");
+
+    	valider.addEventListener('click', function() {
+    		if(homme.checked == false && femme.checked ==false){
+          genretext.style.color = couleurMsg;
+    			genretext.textContent =" Veuillez renseigner le genre";
+    		}
+    		if(pays.value == "none"){
+          paystext.style.color = couleurMsg;
+    			paystext.textContent =" Veuillez renseigner le pays";
+    		}
+        	}, true);
+
+      var reset = document.getElementById("reset");
+      reset.addEventListener('click',function(){
+        femme.checked = false;
+        homme.checked = false;
+        prenom.value =null;
+        nom.value =null;
+        mdp.value =null;
+        pays.value = null;
+      },true);
+
+    </script>
+</body>
+</html>

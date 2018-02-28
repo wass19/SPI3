@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <SCRIPT TYPE="text/javascript" src="./script1.js"></SCRIPT>
+	<title>Actions utilisateur et JavaScript</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="style.css" />
+	<script>
+  function afficheBoiteSurImage(){
+    alert("la souris est sur l'image");
+
+  }
+  function changeimage(id,src){
+    document.getElementById(id).src=src;
+  }
+  function afficheBoiteSurbutton(){
+    alert("vous avez appuyez sur un boutton");
+  }
+  function nuit(){
+    document.body.style.backgroundColor="black";
+    alert("vous avez appuyez sur un boutton");
+    document.getElementById("Lanuit").innerHTML = "nuit";
+		document.getElementById("Lanuit").style.backgroundColor = "yellow";
+  }
+  function jour(){
+    document.body.style.backgroundColor="white";
+    document.body.style.back="black";
+    document.getElementById("Lejour").innerHTML = "jour";
+		document.getElementById("Lejour").style.backgroundColor = "red";
+
+    alert("vous avez appuyez sur un boutton");
+  }
+  function clique(){
+    document.getElementById("idclique").innerHTML = "Cliquez Cliquez";
+		document.getElementById("idclique").style.backgroundColor = "blue";
+  }
+
+	</script>
+	</head>
+		<body > <!-- balise body à completer -->
+	<h1>Actions utilisateur et JavaScript</h1>
+
+	<p>
+		Le DOM est une représentation manipulable par javascript de la page web courante.
+		Structure d'arbre accessible à travers l'objet pré-défini <em> document </em>.
+		En effet,le DOM est  une API (Application Programming Interface, ou interface de programmation) qui nous fournit les moyens
+		d'interagir avec l'arbre-document. C'est une recommandation du W3C pour gérer le contenu de documents XML, HTML en particulier.
+		Une telle API standardisée nous permet d'écrire des scripts indépendants des navigateurs, résistant aux modifications futures des navigateurs,
+		et que nous pourrions aisément traduire dans d'autres langages que JavaScript implémentant cette API.
+		En théorie, contrôle total sur le document, en pratique, certains navigateurs ne supportent pas certaines manipulations.
+	</p>
+
+	<div class="illustration">
+		<img src="/info/etu/l3info/l3info017/Documents/workspace/s6/Architecture_web/tp1img/lapin.jpg" alt="un lapin" width="200"
+		onmouseover=afficheBoiteSurImage()  onmouseout=/> <!-- à completer -->
+	</div>
+	<p>
+		<strong> Actions avec les Boutons :</strong>
+	</p>
+	<button id="idclique" onclick=clique()> cliquez ici !</button> <!-- à completer -->
+
+	<br>
+
+		<button id="Lanuit" onclick=nuit() >
+			<!-- à completer -->
+		nuit</button>
+
+		<button id="Lejour" onclick=jour()>jour</button>  <!-- à completer -->
+	<br />
+	<p>
+		<strong>Actions sur les images:</strong>  Faites passer votre souris par-dessus  l'image lapin
+	</p>
+
+	<div class="illustration">
+		<img id="ecran" src="/info/etu/l3info/l3info017/Documents/workspace/s6/Architecture_web/tp1img/lapin.jpg" alt="un lapin" width="200" onmouseover="changeimage(this.id,'/info/etu/l3info/l3info017/Documents/workspace/s6/Architecture_web/tp1img/chat.jpg')" onmouseout="changeimage(this.id,'/info/etu/l3info/l3info017/Documents/workspace/s6/Architecture_web/tp1img/lapin.jpg')" /><!-- à completer -->
+	</div>
+</body>
+</html>

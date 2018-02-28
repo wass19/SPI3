@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js evenements</title>
+    <meta charset="utf-8"/>
+	
+</head>
+<body id="body">
+	<h1>Denis</h1>
+
+	<p>
+    	<img id="denis" src="denis.jpeg" alt="" />
+	</p>	
+	<button id="Button">Cliquez sur moi :)</button>
+
+
+	<script>
+	function enChargment(){
+		alert("Chargement fini")
+	}
+	window.onload = enChargment;
+
+	var dede = document.getElementById("denis");
+	  dede.addEventListener('mouseover', function() {
+       	  dede.src = "denis2.jpg";
+    	}, true);
+
+	dede.addEventListener('mouseout', function() {
+       	  dede.src = "denis.jpeg";
+    	}, true);
+
+
+	var corp = document.getElementById("body");
+	var button = document.getElementById("Button");
+	  button.addEventListener('click', function() {
+          corp.style.backgroundColor="red";
+	  button.style.backgroundColor="yellow";
+    	}, true);
+	</script>
+</body>
+</html>
