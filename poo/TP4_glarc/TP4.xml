@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJET NOM="TP4" TYPE="Java">
+  <FICHIER>Jeu.java</FICHIER>
+  <FICHIER>Direction.java</FICHIER>
+  <FICHIER>Case.java</FICHIER>
+  <FICHIER>Glark.java</FICHIER>
+  <FICHIER>CaseObstacle.java</FICHIER>
+  <FICHIER>CaseLibre.java</FICHIER>
+  <FICHIER>Borne.java</FICHIER>
+  <FICHIER>Damier.java</FICHIER>
+  <FICHIER>Fenetre.java</FICHIER>
+  <FICHIER>Glouton.java</FICHIER>
+  <FICHIER>PanneauCase.java</FICHIER>
+  <FICHIER>PanneauJeu.java</FICHIER>
+  <FICHIER>Pirate.java</FICHIER>
+  <FICHIER>Sens.java</FICHIER>
+  <FICHIER>Test.java</FICHIER>
+  <FICHIER>PasDeCaseIciException.java</FICHIER>
+</PROJET>
+
