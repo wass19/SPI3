@@ -1,0 +1,49 @@
+<html>
+<head>
+  <script src='http://code.jquery.com/jquery-1.10.2.min.js' type="text/javascript" ></script>
+  <script src='./javascript.js' type="text/javascript" ></script>
+
+
+
+ </head>
+ <body>
+    <form name='form2' method='post' action="#">
+
+    <input  type="button" id="test" value="Ajout"><br>
+
+   </form >
+
+   <ul id = "bonsoir">
+    </ul>
+
+<!--<script type="text/javascript" >
+
+    $('#test').click(function() {
+      var token = '256786540.035ecb8.94eece0bc94a4c6d81b8beb656be6421',
+        userid = 256786540,
+        num_photos = 20;
+
+      alert('bonsoir');
+          $.ajax({
+          	url: 'https://api.instagram.com/v1/users/' + userid + '/media/recent',
+          	dataType: 'jsonp',
+          	type: 'GET',
+          	data: {access_token: token, count: num_photos},
+          	success: function(data){
+           		console.log(data);
+              alert('marche');
+          		for( x in data.data ){
+          			$('#bonsoir').append('<img src="'+data.data[x].images.low_resolution.url+'">');
+
+        		}
+        	},
+        	error: function(data){
+        		console.log(data);
+            alert('marche pas');
+        	}
+        });
+    });
+
+</script>-->
+</body>
+</html>
