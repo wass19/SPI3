@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJET NOM="TD1" TYPE="C">
+  <FICHIER>c1lstop.c</FICHIER>
+  <FICHIER>c1lstop.h</FICHIER>
+  <FICHIER>c1test1.c</FICHIER>
+  <FICHIER>eltint.c</FICHIER>
+  <FICHIER>eltint.h</FICHIER>
+  <FICHIER>eltprim.h</FICHIER>
+  <FICHIER>eltsdd.h</FICHIER>
+  <FICHIER>lstprim.h</FICHIER>
+  <FICHIER>lstptr.c</FICHIER>
+  <FICHIER>lstptr.h</FICHIER>
+  <FICHIER>lstsdd.h</FICHIER>
+  <FICHIER>lsttab.c</FICHIER>
+  <FICHIER>lsttab.h</FICHIER>
+  <FICHIER>Makefile</FICHIER>
+  <FICHIER>td1lstop.h</FICHIER>
+  <FICHIER>td1lstop.c</FICHIER>
+  <FICHIER>td1test1.c</FICHIER>
+  <FICHIER>eltind.c</FICHIER>
+  <FICHIER>eltind.h</FICHIER>
+  <FICHIER>MakefileTest</FICHIER>
+</PROJET>
+

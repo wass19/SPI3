@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJET NOM="TD2" TYPE="C">
+  <FICHIER>c1lstop.c</FICHIER>
+  <FICHIER>c1lstop.h</FICHIER>
+  <FICHIER>c1test1.c</FICHIER>
+  <FICHIER>eltint.c</FICHIER>
+  <FICHIER>eltint.h</FICHIER>
+  <FICHIER>eltprim.h</FICHIER>
+  <FICHIER>eltsdd.h</FICHIER>
+  <FICHIER>lstprim.h</FICHIER>
+  <FICHIER>lstptr.c</FICHIER>
+  <FICHIER>lstptr.h</FICHIER>
+  <FICHIER>lstsdd.h</FICHIER>
+  <FICHIER>lsttab.c</FICHIER>
+  <FICHIER>lsttab.h</FICHIER>
+  <FICHIER>Makefile</FICHIER>
+  <FICHIER>pileprim.h</FICHIER>
+  <FICHIER>pilesdd.h</FICHIER>
+  <FICHIER>piltabdy.c</FICHIER>
+  <FICHIER>piltabdy.h</FICHIER>
+  <FICHIER>testpile.c</FICHIER>
+  <FICHIER>ex1.c</FICHIER>
+  <FICHIER>ex1.h</FICHIER>
+  <FICHIER>eltcar.c</FICHIER>
+  <FICHIER>eltcar.h</FICHIER>
+  <FICHIER>predicat.c</FICHIER>
+  <FICHIER>predicat.h</FICHIER>
+</PROJET>
+

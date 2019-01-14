@@ -1,0 +1,24 @@
+
+all : td1test1
+
+td1test1 : td1test1.o eltprim.o lstprim.o td1lstop.o
+	gcc td1test1.o eltprim.o lstprim.o td1lstop.o -o td1test1 
+	
+td1test1.o : td1test1.c
+	gcc -c td1test1.c -o td1test1.o 
+
+td1lstop.o : td1lstop.c td1lstop.h
+	gcc -c td1lstop.c -o td1lstop.o 
+
+eltprim.o : eltint.c eltint.h
+	gcc -c eltint.c -o eltprim.o
+
+lstprim.o : lstptr.c lstprim.h
+	gcc -c lstptr.c -o lstprim.o
+
+td1lstop.h : lstprim.h
+	touch td1lstop.h
+
+#pour compiler >make -f MakefileTest all
+#ca marche nrmalement
+#j'ai mis en commentaire tout les "afficherListe" dans Td1test1.c

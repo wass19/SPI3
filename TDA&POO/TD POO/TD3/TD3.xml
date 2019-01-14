@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJET NOM="TD3" TYPE="Ruby">
+  <FICHIER>Compte.rb</FICHIER>
+  <FICHIER>CompteCourant.rb</FICHIER>
+  <FICHIER>CompteEpargne.rb</FICHIER>
+  <FICHIER>CompteBancaire.rb</FICHIER>
+  <FICHIER>Document.rb</FICHIER>
+  <FICHIER>Livre.rb</FICHIER>
+  <FICHIER>Dictionnaire.rb</FICHIER>
+  <FICHIER>Bibliotheque.rb</FICHIER>
+  <FICHIER>Decaleur.rb</FICHIER>
+  <FICHIER>Afficheur.rb</FICHIER>
+  <FICHIER>Latence.rb</FICHIER>
+  <FICHIER>Vitesse.rb</FICHIER>
+</PROJET>
+
