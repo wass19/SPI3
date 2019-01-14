@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROJET NOM="Ex1" TYPE="Ruby">
+  <FICHIER>Compte.rb</FICHIER>
+  <FICHIER>Generateur.rb</FICHIER>
+  <FICHIER>Filtre.rb</FICHIER>
+  <FICHIER>TestGenerateur.rb</FICHIER>
+</PROJET>
+
